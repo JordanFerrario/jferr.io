@@ -1,0 +1,120 @@
+:root {
+    --blue-color: #82afff;
+    --purple-color: #9c74d8;
+    --orange-color: #ffaf61;
+    --green-color: #35cc8e;
+    --red-color: #ff5757;
+    --main-bg-color: #f5f5dc;
+    --content-bg-color: #fafafa;
+}
+
+.container, .container > * {
+    border: 1px solid #000;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    margin: 0 5vw 0 5vw;
+    background-color: var(--main-bg-color);
+}
+
+.container {  
+    background-color: var(--content-bg-color);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 7fr 3.5fr 1.5fr 5fr 5fr 5fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      "navbar navbar"
+      "hero hero"
+      "hero-text-left hero-text-right"
+      "projects projects"
+      "project-1 project-2"
+      "project-1 project-3"
+      "contact contact";
+}
+  
+.navbar { 
+    grid-area: navbar;
+    height: 6vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar a {
+    font-size: 1rem;
+    padding: 0 1vw 0 1vw;
+    text-decoration: none;
+    color: black;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+  
+.hero { 
+    grid-area: hero;
+}
+  
+.hero-text-left { 
+    grid-area: hero-text-left; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2vh 2vw;
+}
+  
+.hero-text-right { 
+    grid-area: hero-text-right;
+    display: flex;
+    align-items: center;
+    justify-content: center; 
+    padding: 2vh 2vw;
+
+}
+
+.projects { 
+    grid-area: projects;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.projects p {
+    font-size: 2rem; 
+    letter-spacing: .1vw;
+}
+  
+.project-1 {  
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+      ".";
+    grid-area: project-1;
+}
+
+.project-1 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+  
+.project-2 { 
+    grid-area: project-2;
+}
+  
+.project-3 { 
+    grid-area: project-3; 
+}
+  
+.contact { 
+    grid-area: contact; 
+}
+  
