@@ -15,13 +15,16 @@
   <body>
     <div class="container">
       <div class="navbar">
-        <a href="#">JORDAN FERRARIO</a>
-        <a href="#">ABOUT</a>
-        <a href="#">PROJECTS</a>
-        <a href="#">CONTACT</a>
+        <a href="/">JORDAN FERRARIO</a>
+        <a href="#about">ABOUT</a>
+        <a href="#projects">PROJECTS</a>
+        <a href="#contact">CONTACT</a>
       </div>
-      <div class="hero"></div>
-      <div class="hero-text-left">
+      <div class="hero">
+        <img src="./assets/images/anime-avatar-final.png" alt="" />
+        <img src="./assets/images/speech-bubble-cropped.png" />
+      </div>
+      <div class="hero-text-left" id="about">
         <p>
           Lorem, ipsum dolor sit amet consectetur adipisicing elit. Velit illum
           odit est. Totam nobis amet eum ullam eligendi velit asperiores culpa
@@ -36,15 +39,57 @@
           accusamus doloribus sit modi in, sequi hic! Non in quisquam earum.
         </p>
       </div>
-      <div class="projects">
+      <div class="projects" id="projects">
         <p>PROJECTS</p>
       </div>
       <div class="project-1">
-        <img src="./assets/images/sour haus full.png" alt="" />
+        <a href="https://sour.haus" target="_blank"
+          ><img src="./assets/images/sour haus full.png" alt=""
+        /></a>
+        <div class="overlay-text-p1">
+          Lemmon's website. Designed for a local producer in need of a place to
+          host all of his music, social media, and contact links.
+        </div>
       </div>
-      <div class="project-2"></div>
-      <div class="project-3"></div>
-      <div class="contact"></div>
+      <div class="project-2">
+        <a
+          href="https://lucyjihyeon.github.io/seasons-adventure-game/"
+          target="_blank"
+          ><img src="./assets/images/seasons-adventure.jpg" alt=""
+        /></a>
+        <div class="overlay-text-p2"></div>
+      </div>
+      <div class="project-3">
+        <a
+          href="https://another-note-taker-app-d1921e4524cd.herokuapp.com/"
+          target="_blank"
+          ><img src="./assets/images/note-logo.jpg" alt=""
+        /></a>
+        <div class="overlay-text-p3"></div>
+      </div>
+      <div class="contact" id="contact">
+        <p>CONTACT</p>
+      </div>
+      <div class="find-me">
+        <p>Find me @</p>
+      </div>
+      <div class="contact-links">
+        <div class="email">
+          <a href="mailto:jaferrario1@gmail.com"
+            ><img src="./assets/images/email2.jpg" alt=""
+          /></a>
+        </div>
+        <div class="github">
+          <a href="https://github.com/JordanFerrario" target="_blank"
+            ><img src="./assets/images/github.jpg" alt=""
+          /></a>
+        </div>
+        <div class="linkedin">
+          <a href="https://www.linkedin.com/in/jordan-ferrario/" target="_blank"
+            ><img src="./assets/images/linkedin.jpg" alt=""
+          /></a>
+        </div>
+      </div>
     </div>
 
     <script src="./assets/js/script.js"></script>

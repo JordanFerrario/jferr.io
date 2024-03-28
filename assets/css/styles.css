@@ -3,6 +3,7 @@
     --purple-color: #9c74d8;
     --orange-color: #ffaf61;
     --green-color: #35cc8e;
+    --green2-color: #75b487;
     --red-color: #ff5757;
     --main-bg-color: #f5f5dc;
     --content-bg-color: #fafafa;
@@ -19,10 +20,10 @@ body {
 }
 
 .container {  
-    background-color: var(--content-bg-color);
+    background-color: var(--main-bg-color);
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 7fr 3.5fr 1.5fr 5fr 5fr 5fr;
+    grid-template-rows: .4fr 7.6fr 3.5fr 1.5fr 5fr 5fr 1.5fr 2.9fr;
     gap: 0px 0px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -32,7 +33,8 @@ body {
       "projects projects"
       "project-1 project-2"
       "project-1 project-3"
-      "contact contact";
+      "contact contact"
+      "find-me contact-links";
 }
   
 .navbar { 
@@ -56,8 +58,20 @@ body {
 }
   
 .hero { 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: ". .";
     grid-area: hero;
 }
+
+.hero img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
   
 .hero-text-left { 
     grid-area: hero-text-left; 
@@ -78,7 +92,6 @@ body {
 
 .projects { 
     grid-area: projects;
-    font-weight: bold;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -86,6 +99,7 @@ body {
 
 .projects p {
     font-size: 2rem; 
+    font-weight: bold;
     letter-spacing: .1vw;
 }
   
@@ -98,23 +112,163 @@ body {
     grid-template-areas:
       ".";
     grid-area: project-1;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-1 .overlay-text-p1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.project-1:hover .overlay-text-p1 {
+    opacity: 1;
 }
 
 .project-1 img {
     height: 100%;
     width: 100%;
     object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
 }
+
+.project-1:hover img {
+    transform: scale(1.1);;
+    opacity: 0.25;
+}
+
   
 .project-2 { 
     grid-area: project-2;
+    overflow: hidden;
+}
+
+.project-2 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+}
+
+.project-2:hover img {
+    transform: scale(1.1);;
+    opacity: 0.7;
 }
   
 .project-3 { 
     grid-area: project-3; 
+    overflow: hidden;
+}
+
+.project-3 img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+}
+
+.project-3:hover img {
+    transform: scale(1.1);;
+    opacity: 0.7;
 }
   
 .contact { 
     grid-area: contact; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contact p {
+    font-size: 2rem; 
+    font-weight: bold;
+    letter-spacing: .1vw;
+}
+
+.find-me {
+    grid-area:  find-me;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--green-color);
+}
+
+.find-me p {
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: .2vw;
+}
+
+.contact-links {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "email github linkedin";
+    grid-area: contact-links;
+    background-color: var(--green-color);
+}
+
+.email {
+    grid-area: email;
+    overflow: hidden;
+}
+
+.email img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+}
+
+.email:hover img {
+    transform: scale(1.1);;
+    opacity: 0.7;
+}
+.github {
+    grid-area: github;
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    overflow: hidden;
+}
+
+.github img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+}
+
+.github:hover img {
+    transform: scale(1.1);;
+    opacity: 0.7;
+}
+
+.linkedin {
+    grid-area: linkedin;
+    overflow: hidden;
+}
+
+.linkedin img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 1;
+}
+
+.linkedin:hover img {
+    transform: scale(1.1);;
+    opacity: 0.7;
 }
   
