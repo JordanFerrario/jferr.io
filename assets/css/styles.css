@@ -79,6 +79,7 @@ body {
     align-items: center;
     justify-content: center;
     padding: 2vh 2vw;
+    font-size: 1.5rem;
 }
   
 .hero-text-right { 
@@ -87,6 +88,7 @@ body {
     align-items: center;
     justify-content: center; 
     padding: 2vh 2vw;
+    font-size: 1.5rem;
 
 }
 
