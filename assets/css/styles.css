@@ -124,6 +124,13 @@ body {
     transition: opacity 0.5s ease;
     opacity: 0;
     pointer-events: none;
+    font-size: 1.5rem;
+    /* background: rgba(0, 0, 0, 0.5); Semi-transparent black */
+    background: black;
+    color: white;
+    padding: 5px 10px; 
+    border-radius: 5px; 
+    
 }
 
 .project-1:hover .overlay-text-p1 {
@@ -147,6 +154,27 @@ body {
 .project-2 { 
     grid-area: project-2;
     overflow: hidden;
+    position: relative;
+}
+
+.project-2 .overlay-text-p2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 1.5rem;
+    /* background: rgba(0, 0, 0, 0.5); Semi-transparent black */
+    background: black;
+    color: white;
+    padding: 5px 10px; 
+    border-radius: 5px; 
+}
+
+.project-2:hover .overlay-text-p2 {
+    opacity: 1;
 }
 
 .project-2 img {
@@ -159,12 +187,33 @@ body {
 
 .project-2:hover img {
     transform: scale(1.1);;
-    opacity: 0.7;
+    opacity: 0.25;
 }
   
 .project-3 { 
     grid-area: project-3; 
     overflow: hidden;
+    position: relative;
+}
+
+.project-3 .overlay-text-p3 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.5s ease;
+    opacity: 0;
+    pointer-events: none;
+    font-size: 1.5rem;
+    /* background: rgba(0, 0, 0, 0.5); Semi-transparent black */
+    background: black;
+    color: white;
+    padding: 5px 10px; 
+    border-radius: 5px; 
+}
+
+.project-3:hover .overlay-text-p3 {
+    opacity: 1;
 }
 
 .project-3 img {
@@ -177,7 +226,7 @@ body {
 
 .project-3:hover img {
     transform: scale(1.1);;
-    opacity: 0.7;
+    opacity: 0.25;
 }
   
 .contact { 
