@@ -127,7 +127,6 @@ body {
     opacity: 0;
     pointer-events: none;
     font-size: 1.5rem;
-    /* background: rgba(0, 0, 0, 0.5); Semi-transparent black */
     background: black;
     color: white;
     padding: 5px 10px; 
@@ -168,7 +167,6 @@ body {
     opacity: 0;
     pointer-events: none;
     font-size: 1.5rem;
-    /* background: rgba(0, 0, 0, 0.5); Semi-transparent black */
     background: black;
     color: white;
     padding: 5px 10px; 
@@ -207,7 +205,6 @@ body {
     opacity: 0;
     pointer-events: none;
     font-size: 1.5rem;
-    /* background: rgba(0, 0, 0, 0.5); Semi-transparent black */
     background: black;
     color: white;
     padding: 5px 10px; 
@@ -322,4 +319,49 @@ body {
     transform: scale(1.1);;
     opacity: 0.7;
 }
-  
+
+/* For mobile screens */
+@media (max-width: 600px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+    
+    .hero-text-left .hero-text-right {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .hero-text-left p {
+        font-size: 1rem;
+    }
+
+    .hero-text-right p {
+        font-size: 1rem;
+    }
+
+    .projects p {
+        font-size: 1rem;
+    }
+
+    .contact p {
+        font-size: 1rem;
+    }
+
+    .find-me p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 1024px) {
+    .container {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+
+    .hero-text-left .hero-text-right {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto;
+    }
+}
+
