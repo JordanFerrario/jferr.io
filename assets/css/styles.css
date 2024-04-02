@@ -1,4 +1,5 @@
 :root {
+    /* Color variables */
     --blue-color: #82afff;
     --purple-color: #9c74d8;
     --orange-color: #ffaf61;
@@ -9,14 +10,15 @@
     --content-bg-color: #fafafa;
 }
 
-.container, .container > * {
-    border: 1px solid #000;
-}
-
+/* Body and container styles */
 body {
     font-family: "Roboto", sans-serif;
-    margin: 0 5vw 0 5vw;
+    margin: 0 5vw;
     background-color: var(--main-bg-color);
+}
+
+.container, .container > * {
+    border: 1px solid #000;
 }
 
 .container {  
@@ -36,7 +38,8 @@ body {
       "contact contact"
       "find-me contact-links";
 }
-  
+
+/* Navbar styles */
 .navbar { 
     grid-area: navbar;
     height: 6vh;
@@ -57,6 +60,7 @@ body {
     text-decoration: underline;
 }
   
+/* Hero styles and hero text styles */
 .hero { 
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -92,6 +96,7 @@ body {
 
 }
 
+/* Project section styles */
 .projects { 
     grid-area: projects;
     display: flex;
@@ -227,7 +232,8 @@ body {
     transform: scale(1.1);;
     opacity: 0.25;
 }
-  
+
+/* Contact section styles */
 .contact { 
     grid-area: contact; 
     display: flex;
@@ -255,6 +261,7 @@ body {
     letter-spacing: .2vw;
 }
 
+/* Contact link styles */
 .contact-links {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
@@ -320,8 +327,18 @@ body {
     opacity: 0.7;
 }
 
-/* For mobile screens */
+/* Media queries for responsiveness */
+@media (max-width: 420px) {
+    .navbar a {
+        font-size: 0.75rem;
+    }
+}
+
 @media (max-width: 600px) {
+    body, .container {
+        overflow-x: hidden;
+    }
+
     .container {
         grid-template-columns: 1fr;
         grid-template-rows: auto;
